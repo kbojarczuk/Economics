@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedAreaChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane layoutX="21.0" layoutY="14.0" prefHeight="620.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUIController">
+
+	<left>
+		<AnchorPane prefHeight="298.0" prefWidth="227.0" style="-fx-background-color: #D5D5D5;" BorderPane.alignment="CENTER"> 
+			<children>
+				<ImageView fx:id="logo" fitHeight="124.0" fitWidth="143.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true"> 
+					<image>
+						<Image url="@../../logo.png" /> 
+					</image>
+				</ImageView>
+				<ComboBox fx:id="indicatorList" layoutX="26.0" layoutY="150.0" prefHeight="25.0" prefWidth="175.0" style="-fx-border-color: #A5A5AF;" /> 
+				<Button fx:id="search" layoutX="42.0" layoutY="545.0" mnemonicParsing="false" onAction="#searchActionListener" prefHeight="40.0" prefWidth="143.0" style="-fx-background-radius: 10;" text="Update Data Visualization" textFill="#2e23a1"> 
+					<font>
+						<Font size="11.0" /> 
+					</font>
+					<cursor><Cursor fx:constant="DEFAULT" /></cursor>
+				</Button>
+				<ScrollPane layoutX="21.0" layoutY="191.0" prefHeight="330.0" prefWidth="185.0"> 
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="442.0" prefWidth="198.0" style="-fx-background-color: #D5D5D5; -fx-border-color: #A5A5AF;"> 
+							<children>
+								<CheckBox fx:id="uk" layoutX="22.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="United Kingdom"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="usa" layoutX="22.0" layoutY="420.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="United States"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="russia" layoutX="22.0" layoutY="295.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="Russian Federation"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="italy" layoutX="22.0" layoutY="220.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="Italy"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="france" layoutX="22.0" layoutY="145.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="France"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="japan" layoutX="22.0" layoutY="245.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="Japan"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="india" layoutX="22.0" layoutY="195.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="India"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="canada" layoutX="22.0" layoutY="95.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="Canada"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="brazil" layoutX="22.0" layoutY="70.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="Brazil"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="germany" layoutX="22.0" layoutY="170.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="Germany"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="switzerland" layoutX="22.0" layoutY="345.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="Switzerland"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="saudi" layoutX="22.0" layoutY="320.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="Saudi Arabia"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="argentina" layoutX="22.0" layoutY="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="145.0" text="Argentina"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="australia" layoutX="22.0" layoutY="45.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="146.0" text="Australia"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="turkey" layoutX="22.0" layoutY="370.0" mnemonicParsing="false" text="Turkey"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="china" layoutX="22.0" layoutY="120.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="157.0" text="China"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+								<CheckBox fx:id="korea" layoutX="22.0" layoutY="270.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="158.0" text="Korea"> 
+									<font>
+										<Font name="System Bold" size="12.0" /> 
+									</font>
+								</CheckBox>
+							</children>
+						</AnchorPane>
+					</content>
+				</ScrollPane>
+			</children>
+		</AnchorPane>
+	</left>
+	<center>
+		<TabPane fx:id="tp" prefHeight="610.0" prefWidth="637.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER"> 
+			<tabs>
+				<Tab fx:id="t" text="GDP"> 
+					<content>
+						<BorderPane prefHeight="523.0" prefWidth="646.0"> 
+							<center>
+								<LineChart fx:id="LineChart" prefHeight="598.0" prefWidth="622.0" style="-fx-background-color: #e6e6ff;" BorderPane.alignment="CENTER"> 
+									<xAxis>
+										<NumberAxis fx:id="year" side="BOTTOM" /> 
+									</xAxis>
+									<yAxis>
+										<NumberAxis fx:id="value" side="LEFT" /> 
+									</yAxis>
+								</LineChart>
+							</center>
+						</BorderPane>
+					</content>
+				</Tab>
+				<Tab fx:id="t1" text="GDP Growth"> 
+					<content>
+						<BorderPane prefHeight="200.0" prefWidth="200.0"> 
+							<center>
+								<LineChart fx:id="LineChart1" prefHeight="159.0" prefWidth="242.0" style="-fx-background-color: #e6e6ff;" BorderPane.alignment="CENTER"> 
+									<xAxis>
+										<NumberAxis fx:id="year1" side="BOTTOM" /> 
+									</xAxis>
+									<yAxis>
+										<NumberAxis fx:id="value1" side="LEFT" /> 
+									</yAxis>
+								</LineChart>
+							</center>
+						</BorderPane>
+					</content>
+				</Tab>
+				<Tab fx:id="t2" text="GDP Per Capita"> 
+					<content>
+						<BorderPane prefHeight="200.0" prefWidth="200.0"> 
+							<center>
+								<LineChart fx:id="LineChart2" style="-fx-background-color: #e6e6ff;" BorderPane.alignment="CENTER"> 
+									<xAxis>
+										<NumberAxis fx:id="year2" side="BOTTOM" /> 
+									</xAxis>
+									<yAxis>
+										<NumberAxis fx:id="value2" side="LEFT" /> 
+									</yAxis>
+								</LineChart>
+							</center>
+						</BorderPane>
+					</content>
+				</Tab>
+				<Tab fx:id="t3" text="CPI"> 
+					<content>
+						<BorderPane prefHeight="200.0" prefWidth="200.0"> 
+							<center>
+								<StackedAreaChart fx:id="sac3" style="-fx-background-color: #e6e6ff;" BorderPane.alignment="CENTER"> 
+									<xAxis>
+										<NumberAxis fx:id="year3" side="BOTTOM" /> 
+									</xAxis>
+									<yAxis>
+										<NumberAxis fx:id="value3" side="LEFT" /> 
+									</yAxis>
+								</StackedAreaChart>
+							</center>
+						</BorderPane>
+					</content>
+				</Tab>
+				<Tab fx:id="t4" text="Unemployment"> 
+					<content>
+						<BorderPane prefHeight="200.0" prefWidth="200.0"> 
+							<center>
+								<LineChart fx:id="LineChart4" style="-fx-background-color: #e6e6ff;" BorderPane.alignment="CENTER"> 
+									<xAxis>
+										<NumberAxis fx:id="year4" side="BOTTOM" /> 
+									</xAxis>
+									<yAxis>
+										<NumberAxis fx:id="value4" side="LEFT" /> 
+									</yAxis>
+								</LineChart>
+							</center>
+						</BorderPane>
+					</content>
+				</Tab>
+				<Tab fx:id="t5" text="CAB"> 
+					<content>
+						<BorderPane prefHeight="200.0" prefWidth="200.0"> 
+							<center>
+								<LineChart fx:id="LineChart5" style="-fx-background-color: #e6e6ff;" BorderPane.alignment="CENTER"> 
+									<xAxis>
+										<NumberAxis fx:id="year5" side="BOTTOM" /> 
+									</xAxis>
+									<yAxis>
+										<NumberAxis fx:id="value5" side="LEFT" /> 
+									</yAxis>
+								</LineChart>
+							</center>
+						</BorderPane>
+					</content>
+				</Tab>
+				<Tab fx:id="t6" text="Inflation"> 
+					<content>
+						<BorderPane prefHeight="200.0" prefWidth="200.0"> 
+							<center>
+								<LineChart fx:id="LineChart6" style="-fx-background-color: #e6e6ff;" BorderPane.alignment="CENTER"> 
+									<xAxis>
+										<NumberAxis fx:id="year6" side="BOTTOM" /> 
+									</xAxis>
+									<yAxis>
+										<NumberAxis fx:id="value6" side="LEFT" /> 
+									</yAxis>
+								</LineChart>
+							</center>
+						</BorderPane>
+					</content>
+				</Tab>
+				<Tab fx:id="t7" text="HDI"> 
+					<content>
+						<BorderPane prefHeight="200.0" prefWidth="200.0"> 
+							<center>
+								<BarChart fx:id="bc" prefHeight="102.0" prefWidth="192.0" style="-fx-background-color: #e6e6ff;" BorderPane.alignment="CENTER"> 
+									<xAxis>
+										<NumberAxis side="BOTTOM" fx:id="xAxis" /> 
+									</xAxis>
+									<yAxis>
+										<CategoryAxis fx:id="yAxis" side="LEFT" /> 
+									</yAxis>
+								</BarChart>
+							</center>
+						</BorderPane>
+					</content>
+				</Tab>
+				<Tab fx:id="t8" text="Share of GDP"> 
+					<content>
+						<BorderPane prefHeight="200.0" prefWidth="200.0"> 
+							<center>
+								<StackedBarChart fx:id="sbc" style="-fx-background-color: #e6e6ff;" BorderPane.alignment="CENTER"> 
+									<xAxis>
+										<CategoryAxis side="BOTTOM" fx:id="xAxis1" /> 
+									</xAxis>
+									<yAxis>
+										<NumberAxis fx:id="yAxis1" side="LEFT" /> 
+									</yAxis>
+								</StackedBarChart>
+							</center>
+						</BorderPane>
+					</content>
+				</Tab>
+            <Tab fx:id="t9" text="Trade">
+               <content>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <PieChart fx:id="pc" />
+                     </children>
+                  </StackPane>
+               </content>
+            </Tab>
+			</tabs>
+		</TabPane>
+	</center>
+	<right>
+		<AnchorPane prefHeight="603.0" prefWidth="127.0" style="-fx-background-color: #D5D5D5;" BorderPane.alignment="CENTER"> 
+			<children>
+				<ImageView fx:id="icon" fitHeight="54.0" fitWidth="58.0" layoutX="32.0" pickOnBounds="true" preserveRatio="true"> 
+					<image>
+						<Image url="@../../info.png" /> 
+					</image>
+				</ImageView>
+				<TextArea fx:id="ta" disable="true" editable="false" layoutY="61.0" opacity="0.0" prefHeight="225.0" prefWidth="122.0" /> 
+				<ImageView fx:id="notes" fitHeight="88.0" fitWidth="79.0" layoutX="20.0" layoutY="302.0" opacity="0.5" pickOnBounds="true" preserveRatio="true"> 
+					<image>
+						<Image url="@../../notes.png" /> 
+					</image>
+				</ImageView>
+			</children>
+		</AnchorPane>
+	</right>
+	<bottom>
+		<Label BorderPane.alignment="CENTER" /> 
+	</bottom>
+</BorderPane>
